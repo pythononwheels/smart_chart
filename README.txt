@@ -16,7 +16,8 @@
     
 ### prerequisites
     * python 2.x
-    * A web connection (for google chart tools to work)
+
+### All code and data are processed and rendered in the browser. No data is sent to any server. 
     
 ### comments / questions: khz@tzi.org
 

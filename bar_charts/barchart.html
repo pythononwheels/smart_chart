@@ -43,10 +43,10 @@ function drawExample2() {
   data[1] = google.visualization.arrayToDataTable(rowData2);
 
   var options = {
-    width: 400,
-    height: 240,
-    vAxis: {title: "Cups"},
-    hAxis: {title: "Month"},
+    width: 500,
+    height: 300,
+    vAxis: {title: "Importance"},
+    hAxis: {title: "Costs"},
     seriesType: "bars",
     series: {5: {type: "line"}},
     animation:{
@@ -64,9 +64,9 @@ function drawExample2() {
     google.visualization.events.addListener(chart, 'ready',
         function() {
           button.disabled = false;
-          button.value = 'Switch to ' + (current ? 'Tea' : 'Coffee');
+          button.value = 'toggle me' + (current ? '1st view' : '2nd view');
         });
-    options['title'] = 'Monthly ' + (current ? 'Coffee' : 'Tea') + ' Production by Country';
+    options['title'] = 'A beautiful Chart made by smart_chart and python ' + (current ? '1st view' : '2nd view') + ' ....';
 
     chart.draw(data[current], options);
   }

@@ -108,9 +108,13 @@ if __name__ == "__main__":#
     ostr = ostr.replace("#TITLE_CHART", CHART_OPTIONS["TITLE_CHART"])
     ostr = ostr.replace("#TITLE_XAXIS", CHART_OPTIONS["TITLE_XAXIS"])
     ostr = ostr.replace("#TITLE_YAXIS", CHART_OPTIONS["TITLE_YAXIS"])
-    ostr = ostr.replace("#FONTSIZE", CHART_OPTIONS["FONTSIZE"])        
-        
-    
+    ostr = ostr.replace("#TOGGLE_BUTTON_TEXT", CHART_OPTIONS["TOGGLE_BUTTON_TEXT"])        
+    ostr = ostr.replace("#TOGGLE1_TEXT", CHART_OPTIONS["TOGGLE1_TEXT"])        
+    ostr = ostr.replace("#TOGGLE2_TEXT", CHART_OPTIONS["TOGGLE2_TEXT"])        
+    ostr = ostr.replace("#WIDTH", CHART_OPTIONS["WIDTH"])        
+    ostr = ostr.replace("#HEIGHT", CHART_OPTIONS["HEIGHT"])   
+    ostr = ostr.replace("#BAR_TYPE", CHART_OPTIONS["BAR_TYPE"])   
+         
     ostr = ostr.replace("#CHART_DATA", str(tmpostr))
     out = os.path.join(CHART_OPTIONS["OUTPUT_DIR"], CHART_OPTIONS["OUT_FILE"] )
     print "...writing to: ", out

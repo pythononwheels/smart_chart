@@ -11,12 +11,18 @@ PARSE_OPTIONS = {
 #       CHART_TYPE  : [SERIES || GRADIENT]
 #       GRAD_COLORS : only used when chart_type is GRADIENT.
 CHART_OPTIONS = {
-    "TITLE_CHART"   : "A beautiful Chart made by smart_chart and python",
-    "TITLE_XAXIS"   : "Importance",
-    "TITLE_YAXIS"   : "Costs",
-    "FONTSIZE"      : "11",
-    "OUTPUT_DIR"    : "./",
-    "OUT_FILE"      : "barchart.html"
+    "TITLE_CHART"       : "A beautiful Chart made by smart_chart and python",
+    "TITLE_XAXIS"       : "Importance",
+    "TITLE_YAXIS"       : "Costs",
+    "FONTSIZE"          : "11",
+    "OUTPUT_DIR"        : "./",
+    "OUT_FILE"          : "barchart.html",
+    "BAR_TYPE"          : "line",
+    "TOGGLE_BUTTON_TEXT" : "toggle me",
+    "TOGGLE1_TEXT"      : "1st view",
+    "TOGGLE2_TEXT"      : "2nd view",
+    "WIDTH"             : "500",
+    "HEIGHT"            : "300"
 }
 #
 # 1st parameter defines the colum to convert

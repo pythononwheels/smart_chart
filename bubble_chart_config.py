@@ -17,8 +17,8 @@ CHART_OPTIONS = {
     "TITLE_XAXIS"   : "Importance",
     "TITLE_YAXIS"   : "Costs",
     "FONTSIZE"      : "11",
-    "OUTPUT_DIR"    : "c:/xampp/htdocs/smartchart",
-    "OUT_FILE"      : "2.html"
+    "OUTPUT_DIR"    : "./",
+    "OUT_FILE"      : "series_chart.html"
 }
 #
 # 1st parameter defines the colum to convert

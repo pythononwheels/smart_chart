@@ -33,12 +33,12 @@ function drawExample2() {
   data[1] = google.visualization.arrayToDataTable(rowData2);
 
   var options = {
-    width: 400,
-    height: 240,
-    vAxis: {title: "Cups"},
-    hAxis: {title: "Month"},
+    width: #WIDTH,
+    height: #HEIGHT,
+    vAxis: {title: "#TITLE_XAXIS"},
+    hAxis: {title: "#TITLE_YAXIS"},
     seriesType: "bars",
-    series: {5: {type: "line"}},
+    series: {5: {type: "#BAR_TYPE"}},
     animation:{
       duration: 1000,
       easing: 'out'
@@ -54,9 +54,9 @@ function drawExample2() {
     google.visualization.events.addListener(chart, 'ready',
         function() {
           button.disabled = false;
-          button.value = 'Switch to ' + (current ? 'Tea' : 'Coffee');
+          button.value = '#TOGGLE_BUTTON_TEXT' + (current ? '#TOGGLE1_TEXT' : '#TOGGLE2_TEXT');
         });
-    options['title'] = 'Monthly ' + (current ? 'Coffee' : 'Tea') + ' Production by Country';
+    options['title'] = '#TITLE_CHART ' + (current ? '#TOGGLE1_TEXT' : '#TOGGLE2_TEXT') + ' ....';
 
     chart.draw(data[current], options);
   }

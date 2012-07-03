@@ -24,7 +24,7 @@ if __name__ == "__main__":#
     
     (options, args) = parser.parse_args()
     
-    print options,args 
+    #print options,args 
     
     if options.infile == None:
         parser.error("you must give an input filename and the config_file. Use --help to see the options")

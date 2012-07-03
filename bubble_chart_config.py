@@ -11,7 +11,7 @@ PARSE_OPTIONS = {
 #       CHART_TYPE  : [SERIES || GRADIENT]
 #       GRAD_COLORS : only used when chart_type is GRADIENT.
 CHART_OPTIONS = {
-    "CHART_TYPE"    : "GRADIENT",
+    "CHART_TYPE"    : "SERIES",
     "GRAD_COLORS"   : "RED,BLUE",
     "TITLE_CHART"   : "A beautiful Chart made by smart_chart and python",
     "TITLE_XAXIS"   : "Importance",
@@ -30,6 +30,6 @@ COLUMN_TYPES = {
     "1"    : "STRING",
     "2"    : "INT",
     "3"    : "INT",    
-    "4"    : "INT",
+    "4"    : "STRING",
     "5"    : "INT" 
 }

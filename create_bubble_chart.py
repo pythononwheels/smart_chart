@@ -41,7 +41,7 @@ if __name__ == "__main__":#
     if len(sys.argv) > 2:
         SPLITCHAR = sys.argv[2]
     print "...starting to process data"
-    counter = 1
+    line_counter = 1
     olist = []
     #
     # process the data input
@@ -57,9 +57,9 @@ if __name__ == "__main__":#
         tmpostr += "["
         # for every token in inputline
         for item in tmpline:
-            item = item.replace('"', " ")
-            item = item.replace("'", " ")
-            if counter <= 1:
+            item = item.replace('"', "")
+            item = item.replace("'", "")
+            if line_counter <= 1:
             # this is the headerline, just take it as STRING
                 tmpostr += "'" + str(item) + "'"
                 #if col_counter < num_cols:
@@ -85,16 +85,25 @@ if __name__ == "__main__":#
             col_counter += 1
              
         tmpostr += "]," + "\n"
-        counter += 1
+        line_counter += 1
     tmpostr = tmpostr[0:-2]
     print tmpostr
+    print "...found chart_type: ", CHART_OPTIONS["CHART_TYPE"].upper()
+    if str(CHART_OPTIONS["CHART_TYPE"]).upper() == "GRADIENT":
+        otemplate_file = open( os.path.normpath( "./bubble_chart_gradient_template.py"), "r" )
+        ostr = otemplate_file.read()
+        col1, col2 = str(CHART_OPTIONS["GRAD_COLORS"]).split(",")
+        ostr = ostr.replace("#COL1", col1.lower())
+        ostr = ostr.replace("#COL2", col2.lower())
+    else:
+        otemplate_file = open( os.path.normpath( "./bubble_chart_template.py"), "r" )
+        ostr = otemplate_file.read()
+        ostr = ostr.replace("#TITLE_CHART", CHART_OPTIONS["TITLE_CHART"])
+        ostr = ostr.replace("#TITLE_XAXIS", CHART_OPTIONS["TITLE_XAXIS"])
+        ostr = ostr.replace("#TITLE_YAXIS", CHART_OPTIONS["TITLE_YAXIS"])
+        ostr = ostr.replace("#FONTSIZE", CHART_OPTIONS["FONTSIZE"])        
+        
     
-    otemplate_file = open( os.path.normpath( "./bubble_chart_template.py"), "r" )
-    ostr = otemplate_file.read()
-    ostr = ostr.replace("#TITLE_CHART", CHART_OPTIONS["TITLE_CHART"])
-    ostr = ostr.replace("#TITLE_XAXIS", CHART_OPTIONS["TITLE_XAXIS"])
-    ostr = ostr.replace("#TITLE_YAXIS", CHART_OPTIONS["TITLE_YAXIS"])
-    ostr = ostr.replace("#FONTSIZE", CHART_OPTIONS["FONTSIZE"])        
     ostr = ostr.replace("#CHART_DATA", str(tmpostr))
     out = os.path.join(CHART_OPTIONS["OUTPUT_DIR"], CHART_OPTIONS["OUT_FILE"] )
     print "...writing to: ", out
@@ -105,5 +114,5 @@ if __name__ == "__main__":#
     otemplate_file.close()
     ofile.close()
     
-    print "...processed: ", counter, " lines"
+    print "...processed: ", line_counter, " lines"
     sys.exit(0)    

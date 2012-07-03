@@ -11,10 +11,7 @@
         ]);
 
         var options = {
-          title: '#TITLE_CHART', 
-          hAxis: {title: '#TITLE_XAXIS'},
-          vAxis: {title: '#TITLE_YAXIS'},
-          bubble: {textStyle: {fontSize: #FONTSIZE }}
+          colorAxis: {colors: ['#COL1', '#COL2']}
         };
 
         var chart = new google.visualization.BubbleChart(document.getElementById('chart_div'));

@@ -74,12 +74,14 @@ if __name__ == "__main__":#
             # these are the DATALINES handle as specified in bubble_chart_config.py
                 if COLUMN_TYPES.has_key(str(col_counter)):
                     # A Datatype was specified for this column, so handle appropriately
+                    # first try t oguess input type.
                     if COLUMN_TYPES[str(col_counter)] == "INT":
                         # handle INT
                         tmpostr += str(int(item))
                     elif COLUMN_TYPES[str(col_counter)] == "FLOAT":
                         # handle FLOAT
-                        tmpostr += str(float(item.replace(",",".")))
+                        item = item.replace(",",".")
+                        tmpostr += str(float(item))
                     elif COLUMN_TYPES[str(col_counter)] == "STRING":
                         # handle STRING
                         tmpostr += "'" + str(item) + "'"
@@ -104,16 +106,20 @@ if __name__ == "__main__":#
     else:
         otemplate_file = open( os.path.normpath( "./bubble_chart_series_template.py"), "r" )
         ostr = otemplate_file.read()
-        ostr = ostr.replace("#FONTSIZE", CHART_OPTIONS["FONTSIZE"])        
+    
+    
     # for both templates
+    ostr = ostr.replace("#BUBBLE_ID_FONTSIZE", CHART_OPTIONS["BUBBLE_ID_FONTSIZE"])        
     ostr = ostr.replace("#TITLE_CHART", CHART_OPTIONS["TITLE_CHART"])
     ostr = ostr.replace("#TITLE_XAXIS", CHART_OPTIONS["TITLE_XAXIS"])
     ostr = ostr.replace("#TITLE_YAXIS", CHART_OPTIONS["TITLE_YAXIS"])
+    
     
     ostr = str_replace(ostr, "VAXIS_MAX", "auto")
     ostr = str_replace(ostr, "VAXIS_MIN", "auto")
     ostr = str_replace(ostr, "HAXIS_MAX", "auto")
     ostr = str_replace(ostr, "HAXIS_MIN", "auto")
+    
     
     ostr = ostr.replace("#CHART_DATA", str(tmpostr))
     out = os.path.join(CHART_OPTIONS["OUTPUT_DIR"], CHART_OPTIONS["OUT_FILE"] )

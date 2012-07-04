@@ -21,7 +21,7 @@ CHART_OPTIONS = {
     "TITLE_CHART"   : "A beautiful Chart made by smart_chart and python",
     "TITLE_XAXIS"   : "Importance",
     "TITLE_YAXIS"   : "Costs",
-    "FONTSIZE"      : "11",
+    "BUBBLE_ID_FONTSIZE"      : "4",
     "OUTPUT_DIR"    : "./",
     "OUT_FILE"      : "series_chart.html",
     "VAXIS_MIN"     : "0",
@@ -40,6 +40,6 @@ COLUMN_TYPES = {
     "1"    : "STRING",
     "2"    : "INT",
     "3"    : "INT",    
-    "4"    : "INT",
-    "5"    : "INT" 
+    "4"    : "STRING",
+    "5"    : "INT",
 }

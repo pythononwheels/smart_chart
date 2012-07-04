@@ -4,7 +4,7 @@
 
 PARSE_OPTIONS = {
     "STRIPCHARS"    :   " \n\t",
-    "SPLITCHARS"    :   ",",
+    "SPLITCHARS"    :   ";",
     "NUM_COLS"      :   "4"
 }
 # chart options:
@@ -12,17 +12,11 @@ PARSE_OPTIONS = {
 #       GRAD_COLORS : only used when chart_type is GRADIENT.
 CHART_OPTIONS = {
     "TITLE_CHART"       : "A beautiful Chart made by smart_chart and python",
-    "TITLE_XAXIS"       : "Importance",
-    "TITLE_YAXIS"       : "Costs",
     "FONTSIZE"          : "11",
     "OUTPUT_DIR"        : "./",
-    "OUT_FILE"          : "barchart.html",
-    "BAR_TYPE"          : "line",
-    "TOGGLE_BUTTON_TEXT" : "toggle me",
-    "TOGGLE1_TEXT"      : "1st view",
-    "TOGGLE2_TEXT"      : "2nd view",
-    "WIDTH"             : "650",
-    "HEIGHT"            : "375"
+    "OUT_FILE"          : "treechart.html",
+    "WIDTH"             : "850",
+    "HEIGHT"            : "650"
 }
 #
 # 1st parameter defines the colum to convert
@@ -32,7 +26,7 @@ CHART_OPTIONS = {
 #
 COLUMN_TYPES = {
     "1"    : "STRING",
-    "2"    : "INT",
+    "2"    : "STRING",
     "3"    : "INT",    
     "4"    : "INT" 
 }

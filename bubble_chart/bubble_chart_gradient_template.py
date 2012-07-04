@@ -12,13 +12,9 @@
 
         var options = {
           title: '#TITLE_CHART',
-          hAxis: {title: '#TITLE_XAXIS'},
-          vAxis: {title: '#TITLE_YAXIS'},
-          colorAxis: {colors: ['#COL1', '#COL2']},
-          hAxis: {maxValue: '#HAXIS_MAX'},
-          hAxis: {minValue: '#HAXIS_MIN'},
-          vAxis: {maxValue: '#VAXIS_MAX'},
-          vAxis: {minValue: '#VAXIS_MIN'}
+          hAxis: {title: '#TITLE_XAXIS', maxValue: '#HAXIS_MAX', minValue: '#HAXIS_MIN' },
+          vAxis: {title: '#TITLE_YAXIS', maxValue: '#VAXIS_MAX', minValue: '#VAXIS_MIN' },
+          colorAxis: {colors: ['#COL1', '#COL2']}
         };
 
         var chart = new google.visualization.BubbleChart(document.getElementById('chart_div'));

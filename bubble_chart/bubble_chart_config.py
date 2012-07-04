@@ -16,7 +16,7 @@ PARSE_OPTIONS = {
 #        MAX ONLY   =>   same size for min and max will set max sizes (min will be taken automatically)
 #        MIN & MAX  =>   different values for min and max will use these.
 CHART_OPTIONS = {
-    "CHART_TYPE"    : "SERIES",
+    "CHART_TYPE"    : "GRADIENT",
     "GRAD_COLORS"   : "RED,BLUE",
     "TITLE_CHART"   : "A beautiful Chart made by smart_chart and python",
     "TITLE_XAXIS"   : "Importance",
@@ -40,6 +40,6 @@ COLUMN_TYPES = {
     "1"    : "STRING",
     "2"    : "INT",
     "3"    : "INT",    
-    "4"    : "STRING",
+    "4"    : "INT",
     "5"    : "INT" 
 }

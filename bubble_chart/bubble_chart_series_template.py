@@ -7,20 +7,18 @@
       google.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Task',' Importance',' Cost',' Project',' Effort'],
-['First Task',4,20,'1',39],
-['2nd Task',12,10,'1',11],
-['3rd Task',23,11,'2',46],
-['another Task',31,16,'2',18],
-['one more Task',5,8,'3',11],
-['the last Task',44,11,'3',20]
+          #CHART_DATA
         ]);
 
         var options = {
-          title: 'A beautiful Chart made by smart_chart and python', 
-          hAxis: {title: 'Importance'},
-          vAxis: {title: 'Costs'},
-          bubble: {textStyle: {fontSize: 11 }}
+          title: '#TITLE_CHART', 
+          hAxis: {title: '#TITLE_XAXIS'},
+          vAxis: {title: '#TITLE_YAXIS'},
+          bubble: {textStyle: {fontSize: #FONTSIZE }},
+          hAxis: {maxValue: #HAXIS_MAX},
+          vAxis: {maxValue: #VAXIS_MAX},
+          hAxis: {minValue: #HAXIS_MIN},
+          vAxis: {minValue: #VAXIS_MIN}
         };
 
         var chart = new google.visualization.BubbleChart(document.getElementById('chart_div'));

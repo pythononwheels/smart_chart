@@ -10,15 +10,25 @@ PARSE_OPTIONS = {
 # chart options:
 #       CHART_TYPE  : [SERIES || GRADIENT]
 #       GRAD_COLORS : only used when chart_type is GRADIENT.
+#       in a SERIES Chart, the 4th column has to be STRING and to be used to group the Values
+#       V/H Axis Min and Max Options work as follows: 
+#        AUTO       =>   all set to 0 then sizes are calculated automatically.
+#        MAX ONLY   =>   same size for min and max will set max sizes (min will be taken automatically)
+#        MIN & MAX  =>   different values for min and max will use these.
 CHART_OPTIONS = {
-    "CHART_TYPE"    : "GRADIENT",
+    "CHART_TYPE"    : "SERIES",
     "GRAD_COLORS"   : "RED,BLUE",
     "TITLE_CHART"   : "A beautiful Chart made by smart_chart and python",
     "TITLE_XAXIS"   : "Importance",
     "TITLE_YAXIS"   : "Costs",
     "FONTSIZE"      : "11",
     "OUTPUT_DIR"    : "./",
-    "OUT_FILE"      : "series_chart.html"
+    "OUT_FILE"      : "series_chart.html",
+    "VAXIS_MIN"     : "0",
+    "VAXIS_MAX"     : "0",
+    "HAXIS_MIN"     : "0",
+    "HAXIS_MAX"     : "0",
+    "SORTBUBBLESBYSIZE" : "true"
 }
 #
 # 1st parameter defines the colum to convert
@@ -30,6 +40,6 @@ COLUMN_TYPES = {
     "1"    : "STRING",
     "2"    : "INT",
     "3"    : "INT",    
-    "4"    : "INT",
+    "4"    : "STRING",
     "5"    : "INT" 
 }

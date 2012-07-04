@@ -11,10 +11,14 @@
         ]);
 
         var options = {
-          title: '#TITLE_CHART', 
+          title: '#TITLE_CHART',
           hAxis: {title: '#TITLE_XAXIS'},
           vAxis: {title: '#TITLE_YAXIS'},
-          bubble: {textStyle: {fontSize: #FONTSIZE }}
+          colorAxis: {colors: ['#COL1', '#COL2']},
+          hAxis: {maxValue: '#HAXIS_MAX'},
+          hAxis: {minValue: '#HAXIS_MIN'},
+          vAxis: {maxValue: '#VAXIS_MAX'},
+          vAxis: {minValue: '#VAXIS_MIN'}
         };
 
         var chart = new google.visualization.BubbleChart(document.getElementById('chart_div'));

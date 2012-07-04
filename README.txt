@@ -8,7 +8,17 @@
 ### 1st tool: create_bubble_chart.py
     function: generates a bubble chart from csv input.
     configurable through a config file (see: bubble_chart_config.py)
-    Output graphs can be seen in the wiki.
+    Output graphs can be seen in the github wiki.
+
+### 2nd tool: create_bar_chart.py
+    function: generates a bar chart from csv input.
+    configurable through a config file 
+    Output graphs can be seen in the girhub wiki.
+
+### 1st tool: create_tree_chart.py
+    function: generates a tree chart from csv input.
+    configurable through a config file 
+    Output graphs can be seen in the github wiki.
 
 ### Test it
     A csv sample input and a config file is included, so

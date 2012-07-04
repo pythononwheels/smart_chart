@@ -12,7 +12,13 @@ from optparse import OptionParser
 import datetime
 import ConfigParser
 
-
+def str_replace( instr, replace_string, ifnot_equals=None):
+    if ifnot_equals != None:
+        if CHART_OPTIONS[replace_string] == ifnot_equals:
+            return instr
+    instr = instr.replace(str("#"+replace_string), CHART_OPTIONS[replace_string])
+    return instr
+    
 if __name__ == "__main__":#
  
     parser = OptionParser()
@@ -96,13 +102,18 @@ if __name__ == "__main__":#
         ostr = ostr.replace("#COL1", col1.lower())
         ostr = ostr.replace("#COL2", col2.lower())
     else:
-        otemplate_file = open( os.path.normpath( "./bubble_chart_template.py"), "r" )
+        otemplate_file = open( os.path.normpath( "./bubble_chart_series_template.py"), "r" )
         ostr = otemplate_file.read()
-        ostr = ostr.replace("#TITLE_CHART", CHART_OPTIONS["TITLE_CHART"])
-        ostr = ostr.replace("#TITLE_XAXIS", CHART_OPTIONS["TITLE_XAXIS"])
-        ostr = ostr.replace("#TITLE_YAXIS", CHART_OPTIONS["TITLE_YAXIS"])
         ostr = ostr.replace("#FONTSIZE", CHART_OPTIONS["FONTSIZE"])        
-        
+    # for both templates
+    ostr = ostr.replace("#TITLE_CHART", CHART_OPTIONS["TITLE_CHART"])
+    ostr = ostr.replace("#TITLE_XAXIS", CHART_OPTIONS["TITLE_XAXIS"])
+    ostr = ostr.replace("#TITLE_YAXIS", CHART_OPTIONS["TITLE_YAXIS"])
+    
+    ostr = str_replace(ostr, "VAXIS_MAX", "auto")
+    ostr = str_replace(ostr, "VAXIS_MIN", "auto")
+    ostr = str_replace(ostr, "HAXIS_MAX", "auto")
+    ostr = str_replace(ostr, "HAXIS_MIN", "auto")
     
     ostr = ostr.replace("#CHART_DATA", str(tmpostr))
     out = os.path.join(CHART_OPTIONS["OUTPUT_DIR"], CHART_OPTIONS["OUT_FILE"] )

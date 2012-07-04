@@ -119,7 +119,10 @@ if __name__ == "__main__":#
     ostr = str_replace(ostr, "VAXIS_MIN", "auto")
     ostr = str_replace(ostr, "HAXIS_MAX", "auto")
     ostr = str_replace(ostr, "HAXIS_MIN", "auto")
-    
+    ostr = str_replace(ostr, "WIDTH")
+    ostr = str_replace(ostr, "HEIGHT")
+    ostr = str_replace(ostr, "SIZE_AXIS_MIN")
+    ostr = str_replace(ostr, "SIZE_AXIS_MAX")
     
     ostr = ostr.replace("#CHART_DATA", str(tmpostr))
     out = os.path.join(CHART_OPTIONS["OUTPUT_DIR"], CHART_OPTIONS["OUT_FILE"] )

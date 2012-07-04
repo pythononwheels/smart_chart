@@ -21,14 +21,19 @@ CHART_OPTIONS = {
     "TITLE_CHART"   : "A beautiful Chart made by smart_chart and python",
     "TITLE_XAXIS"   : "Importance",
     "TITLE_YAXIS"   : "Costs",
-    "BUBBLE_ID_FONTSIZE"      : "4",
+    "BUBBLE_ID_FONTSIZE"      : "3",
     "OUTPUT_DIR"    : "./",
     "OUT_FILE"      : "series_chart.html",
     "VAXIS_MIN"     : "0",
     "VAXIS_MAX"     : "0",
     "HAXIS_MIN"     : "0",
     "HAXIS_MAX"     : "0",
-    "SORTBUBBLESBYSIZE" : "true"
+    "SORTBUBBLESBYSIZE" : "true",
+    "WIDTH"         : "1400",
+    "HEIGHT"        : "1000",
+    "SIZE_AXIS_MIN" : "6",
+    "SIZE_AXIS_MAX" : "12"
+    
 }
 #
 # 1st parameter defines the colum to convert

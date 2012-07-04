@@ -12,9 +12,10 @@
 
         var options = {
           title: '#TITLE_CHART', 
-          hAxis: {title: '#TITLE_XAXIS', maxValue: #HAXIS_MAX, minValue: #HAXIS_MIN },
-          vAxis: {title: '#TITLE_YAXIS', maxValue: #VAXIS_MAX, minValue: #VAXIS_MIN },
-          bubble: {textStyle: {fontSize: #BUBBLE_ID_FONTSIZE }}
+          hAxis: {title: '#TITLE_XAXIS' },
+          vAxis: {title: '#TITLE_YAXIS' },
+          bubble: {textStyle: {fontSize: #BUBBLE_ID_FONTSIZE }},
+          sizeAxis: {minValue: #SIZE_AXIS_MIN,  maxSize: #SIZE_AXIS_MAX}
         };
 
         var chart = new google.visualization.BubbleChart(document.getElementById('chart_div'));
@@ -23,6 +24,6 @@
     </script>
   </head>
   <body>
-    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+    <div id="chart_div" style="width: #WIDTHpx; height: #HEIGHTpx;"></div>
   </body>
 </html>

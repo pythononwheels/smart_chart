@@ -29,8 +29,8 @@ CHART_OPTIONS = {
     "HAXIS_MIN"     : "0",
     "HAXIS_MAX"     : "0",
     "SORTBUBBLESBYSIZE" : "true",
-    "WIDTH"         : "1400",
-    "HEIGHT"        : "1000",
+    "WIDTH"         : "900",
+    "HEIGHT"        : "620",
     "SIZE_AXIS_MIN" : "6",
     "SIZE_AXIS_MAX" : "12"
     
@@ -45,6 +45,6 @@ COLUMN_TYPES = {
     "1"    : "STRING",
     "2"    : "INT",
     "3"    : "INT",    
-    "4"    : "STRING",
+    "4"    : "INT",
     "5"    : "INT",
 }
